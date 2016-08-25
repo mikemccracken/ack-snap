@@ -1,0 +1,23 @@
+name: ack
+version: 1
+summary: ack is a tool like grep, optimized for programmers
+description: "Where grep is a general text search tool, ack is especially for the programmer searching source code. Common tasks take fewer keystrokes."
+confinement: strict
+
+apps:
+  ack:
+    command: bin/perl-env-wrapper.sh
+    plugs: ['home']
+
+parts:
+  ack:
+    plugin: perlmake
+    source: https://github.com/petdance/ack2.git
+    stage-packages:
+      - perl-base
+      - libfile-next-perl
+  wrapper:
+    plugin: dump
+    source: .
+    organize:
+      perl-env-wrapper.sh: bin/perl-env-wrapper.sh
