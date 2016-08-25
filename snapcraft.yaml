@@ -1,4 +1,4 @@
-name: ack
+name: ack-mmcc
 version: 1
 summary: ack is a tool like grep, optimized for programmers
 description: "Where grep is a general text search tool, ack is especially for the programmer searching source code. Common tasks take fewer keystrokes."
